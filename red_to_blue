@@ -1,0 +1,6 @@
+from PIL import Image
+image = Image.open('sample_image/monkey.jpg')
+r, g, b = image.split()
+convert_image = Image.merge("RGB",(b,g,r))
+convert_image.save('sample_image/rgb_to_bgr.jpg')
+convert_image.show()
